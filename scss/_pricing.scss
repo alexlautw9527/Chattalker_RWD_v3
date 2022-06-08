@@ -1,0 +1,296 @@
+.pricing-header {
+  z-index: 0;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2.8;
+  margin-bottom: 100px;
+  background: #f7f9fd 0% 0% no-repeat padding-box;
+  border-radius: 0px 0px 0px 300px;
+
+  @include pad {
+    aspect-ratio: 1; 
+
+  }
+
+  @include mobile {
+    aspect-ratio: 0.66;
+
+  }
+}
+
+.navbar {
+  @include pad {
+    background: #ffff;
+  }
+}
+
+.header-text {
+  padding-top: 5%;
+  padding-left: 10%;
+  z-index: 0;
+  @include pad {
+    padding-top: 10%; 
+    padding-left: 5%;
+  }
+
+  .header-title {
+    margin-bottom: $fz-1;
+  }
+}
+
+.header-img {
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  width: 65%;
+  z-index: -1;
+
+  @include pad {
+    display: none;
+  }
+}
+
+.header-img-sm {
+  
+  position: absolute;
+  display: none;
+  left: 0;
+  bottom: 0;
+  width: 105%;
+  z-index: -1;
+
+  @include pad {
+    display: inline;
+  }
+  // @include mobile {
+  //   top: 0;
+  //   right: 0;
+  // }
+}
+.ball-img4 {
+  position: absolute;
+  width: 40%;
+  left: -50%;
+  top: 40%;
+  z-index: -1;
+  
+  @include pad {
+    left: -30%;
+    top: 50%; 
+  }
+}
+
+
+.plan {
+  
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+
+  @include pc-m{
+    width: 90%;
+  }
+
+  @include pad{
+    width: 70%;
+  }
+
+  @include mobile{
+    width: 90%;
+  }
+
+}
+
+.plan-title, .faq-title {
+  margin-bottom: $fz-6;
+  text-align: center;
+}
+
+.plan-btn-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  justify-content: space-evenly;
+  margin-bottom: $fz-6;
+}
+
+.plan-btn {
+  @include btn(auto);
+  
+  &:hover {
+    @include btn-primary;
+
+  }
+}
+
+
+.plan-spec {
+  display: flex;
+  justify-content: space-between;
+  
+  
+  margin-bottom: 100px;
+  @include pad{
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  .plan-spec-card {
+    width: 48%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 10px #00000014;
+    border-radius: 12px;
+  
+    
+    @include pad {
+      width: 100%;
+    }
+    .plan-spec-card-title {
+      padding: 8px 0px;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 1px solid #DDDDDD;
+    }
+
+    .plan-spec-card-body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;  
+
+      row-gap: 32px;
+      padding: 32px 18px;
+    }
+
+    a {
+      // margin: 0 auto;
+      display: block;
+      @include btn(auto);
+      @include btn-primary;
+      font-size: 18px;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      row-gap: 16px;
+      align-self: start;
+      text-align: left;
+      
+
+
+      li {
+        display: flex;
+        &::before {
+          padding-right: 10px;
+          font-family: "Font Awesome 6 Free"; font-weight: 900; 
+          content: "\f00c";
+          display:inline-block;
+          color: #f5ca52;
+        }
+      }
+    }
+  }
+}
+
+.pricing-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  em {
+    font-size: 32px;
+    @include pc-m {
+      font-size:28px;
+    }
+
+    &.primary {
+      color: #56C4C5;
+    }
+  }
+
+  .popularity, .price  {
+    width: 44%;
+    align-self: stretch;
+    
+    padding:12px;
+    font-size: 12px;
+
+    text-align: center;
+
+    background: #F5F5F5 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+  }
+}
+
+.faq {
+  width: 65%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  @include pc-m{
+    width: 90%;
+  }
+
+  @include pad{
+    width: 70%;
+  }
+
+  @include mobile{
+    width: 90%;
+  }
+
+}
+
+.faq-card{
+  margin-bottom: 32px;
+  padding: 0 32px;
+
+
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 2px 10px #00000014;
+  border-radius: 12px;
+  &:last-child{
+    margin-bottom:0px
+  }
+
+  .title {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    font-size: 18px;
+    font-weight: bold;
+
+    i {
+      color: #56C4C5;
+    }
+  }
+
+  .content {
+    display: none;
+    padding-top: 8px;
+    padding-bottom: 32px;
+    line-height: 2;
+    color: #747474;
+    
+  }
+
+  .active {
+    color: #56C4C5;
+  }
+}
+
+.flex-m {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

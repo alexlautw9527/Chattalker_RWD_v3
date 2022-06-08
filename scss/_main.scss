@@ -1,0 +1,874 @@
+
+
+/*------------------------------------*\
+  #default settings
+\*------------------------------------*/
+
+body {
+    font-family: sans-serif;
+    z-index: 0;
+    color: $main-font-color;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.m0-a {
+    margin: 0 auto;
+}
+
+/*------------------------------------*\
+  #default settings
+\*------------------------------------*/
+
+.section-title {
+    font-size: $fz-5;
+    font-weight: bold;
+
+    @include pad {
+        font-size: 1.75rem;
+        font-weight: bold;
+	}
+
+    @include mobile {
+        font-size: 28px;
+        font-weight: bold;
+	}
+}
+
+
+.price-btn {
+    display:block;
+    width: 136px;
+    padding: $fz-0 $fz-5 ;
+
+    background: $primary-font-color;
+    color: #FFFFFF;
+    border-radius: 27px;
+
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.5;
+
+}
+
+/*------------------------------------*\
+  #背景
+\*------------------------------------*/
+.bg-img-lg{
+    position: absolute;
+    width: 60%;
+    top: 0px;
+    right: 0px;
+    z-index: -1;
+
+    @include pad {
+        display:none; 
+	}
+}
+
+.bg-img-sm{
+    display: none;
+    position: absolute;
+    width: 80%;
+    bottom: 0;
+    z-index: -1;
+
+    @include pad {
+        display:block; 
+	}
+
+}
+
+
+/*------------------------------------*\
+  #主容器
+\*------------------------------------*/
+
+/*適應超寬螢幕*/
+.home-container {
+    max-width: 1366px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.sub-container{
+    margin: 0 auto;
+}
+
+
+
+/*------------------------------------*\
+  #Navbar
+\*------------------------------------*/
+.ball-img1{
+    position: absolute;
+    width: 33%;
+    height: auto;
+    left: -35%; 
+    bottom:-250px;
+
+    z-index: -1;
+
+    @include mobile{
+        left: -20%; 
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    width: 100%;
+    
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    padding-bottom: 24px;
+    padding-top: 24px;
+
+    @include pad {
+        border-bottom: 2px solid #FFD153;
+        // margin-bottom: 30px;
+    }
+
+    @include mobile {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .navbar-img {
+        width: 218px;
+        display: block;
+
+        @include pad {
+            width: 150px;
+        }
+    }
+    
+    .navbar-btn {
+        width: 128px;
+        padding: 8px 32px ;
+    
+        background: #FF5D50;
+        color: #FFFFFF;
+        border-radius: 22px;
+        text-decoration: none;
+    }
+}
+
+
+
+/*------------------------------------*\
+  #jumbotron
+\*------------------------------------*/
+.big-em {
+    margin-bottom: 6px ;
+    text-align: left;
+    font-size: $fz-6;
+    font-weight: bold;
+
+    @include pad {
+        font-size: $fz-5;  
+    }
+}
+
+
+.jumbotron {
+    width:80%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    margin-bottom: 15%;
+    
+    // padding-left: 10%;
+    // padding-right: 10%;
+
+    
+    line-height:1.5;
+
+    @include pad {
+        justify-content: center;
+        margin-bottom: 15%;
+    }
+
+    @include mobile {
+        width:90%;
+    }
+
+
+    .jumbotron-intro {
+        width: 50%;   
+
+        @include pad {
+            width: 90%;   
+        }
+    
+
+        .jumbotron-title {
+            font-size: $fz-2;
+            text-align: left;
+            font-weight: bold;
+            color: $primary-font-color;
+            margin-bottom: 6px;
+            
+        }
+        
+        
+        
+        .jumbotron-wording {
+            text-align: left;
+        }
+    }
+
+    .jumbotron-img {
+        width: 50%;
+        @include pad {
+            width: 90%;  
+        }
+    }
+    
+}
+
+
+
+/*------------------------------------*\
+  #平台區
+\*------------------------------------*/
+
+.platform{
+    width: 70%;
+    margin-bottom: 7%;
+    @include mobile {
+        margin-bottom: 15%;
+    }
+}
+
+
+.platform-title{
+    text-align: center;
+    margin-bottom: 5%;
+    @include mobile {
+        margin-bottom: 15%;
+    }
+}
+
+.platform-list {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include mobile {
+        row-gap: 30px;
+        // padding-left: 10%;
+        // padding-right: 10%;
+    }
+    
+
+
+    .platform-card {
+        
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+
+        line-height: 1.5;
+        text-align: center;
+
+        @include mobile {
+            width: 100%;
+        }
+    
+        .platform-card-img {
+            width: 96px;
+        }
+        
+        .platform-card-title {
+            margin: 24px 0 24px;          
+            font-size: $fz-4;      
+        }
+        
+        .platform-card-text {
+            text-align: center;
+            color: #747474;
+        }
+
+        @include mobile {
+            .platform-card-title {
+                margin: 16px 0 16px;          
+                font-size: $fz-3;      
+            }
+        }
+        
+    }
+
+}
+
+
+
+/*------------------------------------*\
+  #情境區
+\*------------------------------------*/
+
+.scenario {
+    margin-bottom: 8%;
+    width: 80%;
+
+    @include mobile {
+        width: 90%;
+    }
+
+}
+
+.scenario-title {
+    text-align: center;
+}
+
+.scenario-title-sub {
+    margin: 16px 0 48px;
+    text-align: center;
+
+    
+}
+
+.scenario-card-list{
+    
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;    
+
+    @include pad {
+        row-gap: 20px;
+    }
+
+    @include mobile {
+        justify-content: center;
+    }
+
+    .scenario-card {
+        width: 24%;
+        display: flex;
+        flex-direction: column;
+
+        line-height: 1.5;
+
+        @include pad {
+            width: 48%;
+        }
+    
+        @include mobile {
+            width: 80%;
+        }
+    
+        .scenario-card-img {
+            display: block;
+            border-radius: 12px 12px 0 0 ;
+        }
+        
+        .scenario-card-body {
+    
+            border-radius: 0 0 12px 12px;
+            box-shadow: 0px 2px 10px #00000014;
+            padding: 0px 16px 24px;
+        
+            /*神奇 可以讓card拉到一樣長*/
+            flex: 1;
+            background: #fff;
+        }
+        
+        .scenario-card-title{
+            text-align:center;
+            margin-top: 16px;
+            margin-bottom: 16px;
+        
+            font-weight: bold;
+            color: $primary-font-color;
+        }
+        
+        .scenario-card-text{
+            text-align:center;
+        }    
+    
+        
+    }
+
+    
+
+}
+
+
+.ball-img2{
+    position: absolute;
+    width: 25%;
+    right: -20%; 
+    bottom:-200px;
+    z-index: -1;
+
+    @include pad {
+        bottom: -3%;
+    }
+
+    @include mobile {
+        width: 40%;
+        right: -20%; 
+    }
+}
+
+/*------------------------------------*\
+  #功能區
+\*------------------------------------*/
+
+.feature {
+    width: 80%;
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row-reverse;
+
+    margin-bottom: 7%;
+
+    @include pad {
+        flex-flow: row-reverse wrap;
+        justify-content: center;
+        margin-bottom: 15%;
+    }
+    @include mobile {
+        width: 90%
+    }
+}
+    
+
+.feature-card-list {
+    // padding-right: 10%;
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 30px;
+
+    width: 50%;
+
+    @include pad {
+        width: 100%;
+    }
+
+    @include mobile {
+        justify-content: center;
+    }
+
+    .feature-card {
+        width: 48%;
+        padding-top: 36px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 48px;
+        
+        box-shadow: 0px 2px 10px #00000014;
+        border-radius: 12px;
+
+        line-height: 1.5;
+
+        @include mobile {
+            width: 70%;
+        }
+
+        .feature-card-img-border{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            width: 50%;
+            height: auto;
+        
+            padding: 10%;
+            border-radius: 50%;
+            box-shadow: 0px 2px 10px #00000014;
+        }      
+
+        .feature-card-title {
+            margin: 16px 0 24px;
+            text-align: left;
+            font-size: $fz-3;
+            font-weight: bold;
+        }
+        
+        .feature-card-text {
+            text-align: left;
+        }
+        
+          
+    }
+    
+    
+}
+    
+.feature-intro {
+    width: 39%;
+    margin: 16px 0 24px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+
+    .feature-intro-title{
+        margin-bottom: $fz-1;
+    }
+
+    .feature-intro-text{
+        margin-bottom: $fz-1;
+    }
+
+
+    @include pad {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        a {
+            margin: 0 auto;
+        }
+    }
+
+}
+
+/*------------------------------------*\
+  #使用者好評
+\*------------------------------------*/
+
+
+.ball-img3 {
+    position: absolute;
+    width: 15%;
+    left: -10%;
+    top: 5%;
+    z-index: 0;
+    @include pad {
+        width: 50%;
+        left: -30%;
+    }
+}
+
+
+
+.testimonial {
+    width: $testimonial-container-width;
+    position: relative;
+    @include mobile {
+        width: 90%;
+    }
+}
+
+.testimonial-title{
+    margin-bottom:10%;
+    text-align:center;
+
+    @include mobile {
+        margin-bottom: 30%;
+    }
+}
+
+.testimonial-card-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 100px;
+    position:relative;
+}
+
+
+.testimonial-card {
+
+    position: relative;
+    width: 30%;
+    
+    padding: 48px 32px 24px;
+    /* padding: 4% 3% 2%; */
+
+    line-height: 1.5;
+
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 2px 10px #00000014;
+
+    @include pad {
+        width: 100%;
+    }
+
+    .testimonial-card-img { 
+        position: absolute;
+        top:-50px;
+        width: 80px;
+        border-radius: 50%; 
+        box-shadow: 0px 2px 10px #00000014;
+    }
+    
+    .testimonial-card-hr {
+        margin: 24px 0 24px;
+    }
+    
+    .testimonial-card-title {
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+    
+    .testimonial-card-user {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .testimonial-card-star {
+        color: #F5CA52;
+    }
+
+}
+
+
+
+
+/*----------------------footer----------------------*/
+
+.footer {
+    background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/home_footer.svg) no-repeat;
+    background-size:100% auto;
+
+    margin-top: 136px;
+
+    padding-top: 260px;
+    padding-bottom: 100px;
+
+    @include mobile {
+            background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg) no-repeat;
+            background-size:100% auto; 
+            
+            padding-top: 80%;
+            padding-bottom: 15%;
+    }
+
+}
+
+.footer-title {
+    text-align: center;
+    margin-bottom: 48px;
+    font-size:2rem;
+    font-weight: bold;
+
+    @include mobile{
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 24px;
+    
+    }
+
+}
+
+
+
+
+
+footer{
+    padding-top: 16px;
+    padding-bottom: 16px;
+    background: #F5F5F5;
+    text-align: center;
+
+}
+
+
+
+/*----------------------1280~768過渡----------------------*/
+
+
+// @media (max-width: 1280px) {
+
+
+//     .feature-container {
+//         flex-direction: column-reverse;
+//         align-items: center;
+//         width: 80%;
+//         flex-wrap: wrap;
+    
+//     }
+
+//     .feature-card-wrapper {
+
+//         display: flex;
+//         justify-content: space-between;
+//         flex-wrap: wrap;
+//         row-gap: 28px;
+//         width: 80%;
+
+//     }
+    
+ 
+
+//     .testimonial-container {
+//         justify-content: space-around;
+//     }
+// }
+
+/*----------------------mobile rwd----------------------*/
+
+
+
+// @media (max-width: 768px) {
+
+
+//     .section-title {
+//         font-size: 1.75rem;
+//         font-weight: bold;
+//     }
+
+//     .bg-img-lg{
+//         display:none; 
+//     }
+
+//     .bg-img-sm{
+//         display:block; 
+        
+//     }
+
+//     .header-container {
+//         padding-bottom: 24px;
+//         padding-top: 24px;
+//         display: flex;
+//         justify-content:space-between;
+//         align-items:center;
+
+//         
+//     }
+
+//     .header-img {
+//         width: 130px;
+//         display: block;
+//     }
+
+//     .banner-container {
+//         flex-direction: column;
+//         width: 90%; 
+//         margin-top: 32px;
+
+//     }
+
+//     .banner-title {
+//         font-size: 1rem;
+//         text-align: left;
+//         line-height:1.5;
+//         font-weight: bold;
+//         line-height: 1.5;
+//         color: #56C4C5;
+    
+//     }
+
+//     .platform-container {
+//         flex-direction: column;
+//     }
+    
+    
+//     .banner-em {
+//         margin: 8px 0 16px ;
+//         text-align: left;
+//         font-size: 2rem;
+//         font-weight: bold;
+//         line-height: 1.5;
+//     }
+    
+//     .banner-wording {
+//         text-align: left;
+//         line-height: 1.5;
+//     }
+
+//     .banner-img {
+//         width: 304px;
+//     }
+
+//     .platform-container {
+//         gap: 24px;
+//         width: 90%;
+//     }
+
+//     .scenario-container{
+//         flex-direction: column;
+//         align-items: center;
+//         width: 90%;     
+//     }
+
+//     .feature-card-wrapper{
+//         flex-direction: column;
+//         align-items: center;
+
+//     }
+
+
+//     .feature-intro-text{
+//         font-size: 1rem;
+//     }
+
+//     .testimonial-container {
+//         flex-direction: column;
+//         align-items: center;
+//         gap: 100px;
+//         width: 90%;
+//     }
+    
+
+
+//     .testimonial-card {
+
+//         position: relative;
+//         width: 335px;
+    
+//     }
+
+//     .testimonial-card-img { 
+      
+//         width: 80px;
+//         border-radius: 50%; 
+//         box-shadow: 0px 2px 10px #00000014;
+//     }
+
+//     .footer {
+
+//         background: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/chatTalker_images/footer_sm.svg) no-repeat;
+//         background-size:100% auto; 
+        
+//         padding-top: 80%;
+//         padding-bottom: 27%;
+//     }
+
+//     .footer-title {
+//         font-size: 1.5rem;
+//         text-align: center;
+//         margin-bottom: 24px;
+    
+//     }
+
+//     .price-btn {
+//         display:block;
+//         width: 136px;
+//         padding: 12px 32px ;
+    
+//         background: #56C4C5;
+//         color: #FFFFFF;
+//         font-size: 1.125rem;
+//         border-radius: 27px;
+    
+//         text-align: center;
+//         text-decoration: none;
+    
+//     }
+
+    
+// }
